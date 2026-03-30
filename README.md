@@ -6,9 +6,10 @@ A courier app for an AI agent-dispatched delivery system.
 
 ## Overview
 
-Unlike traditional delivery apps (e.g., DoorDash), where a human places an order, this system is driven by an AI agent.
-
-The agent monitors signals like inventory, calendar events, and demand patterns to proactively create delivery jobs — and continues to update them in real time during execution.
+Unlike traditional delivery apps (e.g., DoorDash), where a human places an order, this system is driven by AI agents.
+The agents monitor signals like inventory, calendar events, and demand patterns — rather than human-initiated needs — to proactively create delivery jobs, and continue to update them in real time during execution.
+A central orchestrator agent manages the workflow, while specialized agents handle tasks like demand generation, dispatching, and feasibility evaluation.
+The agent logic is assumed and not implemented in this project. The focus is on the courier flow and system design, rather than implementing the agent logic.
 
 ---
 
