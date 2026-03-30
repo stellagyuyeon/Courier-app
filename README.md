@@ -90,4 +90,6 @@ Courier can accept or decline the update.
 
 ## Running a prototpye
 
-Run the app locally and open http://localhost:3000
+https://courier-app-git-main-stellagyuyeons-projects.vercel.app/
+
+Best viewed on a laptop.
