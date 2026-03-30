@@ -42,8 +42,10 @@ Courier receives:
 ---
 
 ## Mid-Delivery Update (Core Feature)
+Not all updates are equal. The agent distinguishes between informational updates and action-required updates.
+For example, minor changes such as a floor update (where the overall destination remains the same) are surfaced as informational updates without requiring user action. 
+However, when the scope of the task changes — such as additional items or a different delivery location — the system gives the courier control to accept or decline the update.
 Updates are not arbitrary — the agent evaluates kitchen capacity before sending any modification, only prompts the courier when a justified pay bump is included, and reassigns the task to another nearby courier if declined.
-
 
 At 2:10 PM:
 
