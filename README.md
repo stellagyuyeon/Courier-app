@@ -85,8 +85,6 @@ Courier can accept or decline the update.
 
 ---
 
-## Running Locally
+## Running a prototpye
 
-```bash
-npm install
-npm run dev
+Run the app locally and open http://localhost:3000
