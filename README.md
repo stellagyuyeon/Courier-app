@@ -1,6 +1,6 @@
 # Courier App — Agent-Dispatched Delivery Platform
 
-A mobile-first courier app for an AI agent-dispatched delivery system.
+A courier app for an AI agent-dispatched delivery system.
 
 ---
 
