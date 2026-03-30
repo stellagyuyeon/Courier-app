@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Courier App — Agent-Dispatched Delivery Platform
 
-## Getting Started
+A mobile-first courier app for an AI agent-dispatched delivery system.
 
-First, run the development server:
+---
+
+## Overview
+
+Unlike traditional delivery apps (e.g., DoorDash), where a human places an order, this system is driven by an AI agent.
+
+The agent monitors signals like inventory, calendar events, and demand patterns to proactively create delivery jobs — and continues to update them in real time during execution.
+
+---
+
+## Demo Flow
+
+Job Offer → Accept → Pickup → On the Way → Deliver → Complete
+
+---
+
+## Use Case
+I chose an office sandwich vending machine as the primary use case, as it allows the agent to leverage structured signals (inventory, time, and consumption patterns) to proactively generate orders.
+
+
+At 1:00 PM, the system detects:
+
+- Only 5 sandwiches left in inventory  
+- A 3:00 PM meeting expanding from 10 → 15 attendees  
+
+The agent predicts a shortage and creates a delivery job:
+
+- Egg Mayo ×15  
+- Ham Cheese ×5  
+
+Courier receives:
+
+- 2.4 mi  
+- 18 min  
+- $12.50 payout  
+
+---
+
+## Mid-Delivery Update (Core Feature)
+Updates are not arbitrary — the agent evaluates kitchen capacity before sending any modification, only prompts the courier when a justified pay bump is included, and reassigns the task to another nearby courier if declined.
+
+
+At 2:10 PM:
+
+- 5 more attendees join  
+- The agent confirms the kitchen can prepare 3 more items  
+
+→ The job updates in real time:
+
+- +3 Egg Mayo sandwiches  
+- $12.50 → $17.50 (+$5.00)
+
+Courier can accept or decline the update.
+
+---
+
+## Key Features
+
+- AI-generated job offers  
+- Real-time task updates  
+- Dynamic pay adjustments  
+- Earnings efficiency ($/mi)  
+- Courier decision control (accept / decline)  
+- Explainable AI actions  
+
+---
+
+## What’s Different from Traditional Systems
+
+- Proactive: jobs are created by the system  
+- Dynamic: tasks change during delivery  
+- System-driven: no manual coordination needed  
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- Tailwind CSS
+
+---
+
+## Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
